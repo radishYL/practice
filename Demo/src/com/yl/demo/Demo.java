@@ -11,6 +11,10 @@ public class Demo {
 
 		System.out.println("12345");
 
+		synchronized (Demo.class){
+
+        }
+
 	}
 	
 }
