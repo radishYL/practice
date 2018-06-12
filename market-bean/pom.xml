@@ -1,0 +1,62 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.market.pom</groupId>
+    <artifactId>market-pom</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>market-bean</artifactId>
+  <name>market-bean</name>
+  <description>存放pojo类及mapper文件</description>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <build>
+  	<resources>
+  		<resource>
+  			<directory>src/main/java</directory>
+  			<!-- 不会被过滤 -->
+  			<filtering>false</filtering>
+  			<!-- 配置资源文件 -->
+  			<includes>
+  				<include>**/*.xml</include>
+  				<include>**/*.properties</include>
+  			</includes>
+  		</resource>
+  		
+  		<resource>
+  			<directory>src/main/resources</directory>
+  			<!-- 此段与上面一致 -->
+  			<filtering>true</filtering>
+  			<!-- 过滤非下面文件的文件 -->
+  			<excludes>
+  				<exclude>**/*.xml</exclude>
+  				<exclude>**/*.properties</exclude>
+  			</excludes>
+  		</resource>
+  		
+  	</resources>
+  	
+  </build>
+  
+  <dependencies>
+  	<dependency>
+  		<groupId>com.market.pom</groupId>
+  		<artifactId>market-common</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.mybatis</groupId>
+  		<artifactId>mybatis</artifactId>
+  	</dependency>
+  </dependencies>
+</project>
